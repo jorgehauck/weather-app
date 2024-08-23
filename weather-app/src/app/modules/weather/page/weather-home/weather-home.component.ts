@@ -29,7 +29,6 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
       next: (response) => {
         response && (this.weatherDatas = response);
         console.log("dados: ", this.weatherDatas);
-
       },
       error: (error) => {
         console.log(error);
@@ -41,7 +40,6 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
     this.getWeatherDatas(this.initialCityName);
     this.initialCityName = '';
   }
-
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
